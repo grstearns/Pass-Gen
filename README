@@ -13,7 +13,7 @@ TODOs:
 add tags (high scrabble, left/right hand, hard-to-spell)
 search by length, syllables, min scrabble score
 add random digit strings (alphanum, hex, printable ascii)
-add koremutake
+add koremutake (http://rubygems.org/gems/koremutake)
 add random "uncommon" word
 api
 drop-in gem?
