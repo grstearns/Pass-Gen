@@ -1,0 +1,9 @@
+<table>
+	<% @table.each do |row| %>
+	<tr>
+		<% row.each do |item| %>
+		<td><%= item.spelling.spelling %></td>
+		<% end %>
+	</tr>
+	<% end %>
+</table>
