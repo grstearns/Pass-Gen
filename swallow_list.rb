@@ -1,4 +1,4 @@
-wordfile = '/home/greg/Wordlists/wiktionary/20k.pos'
+wordfile = '20k.txt'
 
 File.readlines(wordfile).each do |line|
   	stripped = line.strip
