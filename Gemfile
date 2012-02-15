@@ -39,7 +39,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-
+gem 'pry-rails', :group => :development
 
 gem "lingua", "~> 0.6.2"
 gem "crypt-isaac", "~> 0.9.1"
