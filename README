@@ -1,0 +1,26 @@
+This is a passphrase generator. It gives you 4 verbs, 4 adjectives, and 4 nouns. You are free to pick a combination that is easy to remember (i.e. funny) and easy to type. It is recommended that you also add punctuation and capitalization and some otherwise special characters.
+
+It is recommended that you use this as a starting place to create a strong and easy to remember master password to use with an encrypted password vault such as Lastpass, or keycrypt.
+
+It uses the ISAAC number generator for random numbers of cryptographic quality[0].
+
+In the incuded dictionary are 7766 verbs, 5163 adjectives, and 11868 nouns. Follwing the strict V A N convention, there are almost 476 BILLION combinations[1]. Mixing the combinations randomly cubes that number, yeilding nearly 108×10³³ possible combinations[2]. This is roughly equivelant to the number of atoms in 44 million tons of lead[3].
+
+The dictionary is built from the top 20,000 common words list as found on Wiktionary. This dictionary seems to be based on public domain works and may be biased toward words and uses that may be out-of-date. Words that were not defined there were removed, the remaining list was then cross-referenced with another dictionary to find the lexical classes for each word. Words may have multiple lexical classes and are double or tripple counted (e.g. "Fly" can be a noun (animal), a verb (to soar), and an adjective (cool)). Conjugations and pluralizations are also multi-counted ("Fly", "Flies", and "Flew" are 3 different words in the dictionary).
+
+
+TODOs:
+add tags (high scrabble, left/right hand, hard-to-spell)
+search by length, syllables, min scrabble score
+add random digit strings (alphanum, hex, printable ascii)
+add koremutake
+add random "uncommon" word
+api
+drop-in gem?
+cache sql responses
+
+References:
+[0]: http://rubygems.org/gems/crypt-isaac
+[1]: 7766*5163*11868 = 475.857642744e+9
+[2]: [1]**3 = 107.753440723e+33
+[3]: [2] / http://www.wolframalpha.com/input/?i=number+of+atoms+in+a+ton+of+lead (2.64e+27) = 43.8e+6
