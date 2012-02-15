@@ -1,9 +1,15 @@
 class PasswordController < ApplicationController
   def index
-  	@nouns = Word.random_words(:noun)
-  	@adjectives = Word.random_words(:adjective)
-  	@verbs = Word.random_words(:verb)
+  	@nouns = Word.random(:noun)
+  	@adjectives = Word.random(:adjective)
+  	@verbs = Word.random(:verb)
 
   	@table = @verbs.zip @adjectives, @nouns
   end
+
+  def show(number=4, type=:any)
+  	@words = Word.random(:type, number)
+  end
+
+
 end
