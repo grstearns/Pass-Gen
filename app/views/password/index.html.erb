@@ -7,3 +7,15 @@
 	</tr>
 	<% end %>
 </table>
+
+<div>
+	<p><%= @rand_string %></p>
+	<p><%= @rand_hex %></p>
+	<p><%= @rand_printable %></p>
+</div>
+
+<ul>
+	<% @pin.each do |p| %>
+		<li><%= "%04d" % p %></li>
+	<% end %>
+</ul>

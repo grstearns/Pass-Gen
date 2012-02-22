@@ -2,11 +2,15 @@ class Word < ActiveRecord::Base
   belongs_to :spelling
   belongs_to :lex
 
-  def self.random(lex=:any, number=4, rand=Crypt::ISAAC.new)
+  def self.random(opts={})
+    lex=opts[:lex] || :any
+    number=opts[:number] || opts[:count] || opts[:size] || 4
+    rand=opts[:rand] || Random.new
+
     self.by_lex(lex).to_ary.sample(number, random: rand)
   end
 
-  def self.by_lex(lex=nil)
+  def self.by_lex(lex=:any)
     if lex == :any
       self.joins(:lex).includes(:spelling)
     else
