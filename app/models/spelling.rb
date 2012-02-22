@@ -1,4 +1,5 @@
 # require 'lingua'
+require "char"
 include Lingua::EN
 
 class Spelling < ActiveRecord::Base
