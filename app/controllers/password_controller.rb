@@ -1,4 +1,5 @@
 require "rand_string"
+require "koremu"
 
 class PasswordController < ApplicationController
   def index
@@ -19,6 +20,10 @@ class PasswordController < ApplicationController
   	#
 	@pin = Array.new
   	4.times{ @pin << ran.rand(9999) }
+
+  	#
+  	@kore = Array.new
+  	4.times{ @kore << KoremuFixnum.new(ran.rand(9999999)).to_ks }
   end
 
   def show(number=4, type=:any)

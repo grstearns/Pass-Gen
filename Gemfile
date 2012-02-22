@@ -43,3 +43,4 @@ gem 'pry-rails', :group => :development
 
 gem "lingua", "~> 0.6.2"
 gem "crypt-isaac", "~> 0.9.1"
+gem "koremutake"
