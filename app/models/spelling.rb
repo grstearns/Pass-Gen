@@ -5,7 +5,7 @@ include Lingua::EN
 class Spelling < ActiveRecord::Base
   has_many :words
   has_many :lexes, :through => :word
-
+  has_and_belongs_to_many :tags
 
   attr_accessible :spelling
   after_initialize :update_numbers
