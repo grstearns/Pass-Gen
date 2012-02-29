@@ -1,5 +1,5 @@
 module Char
-  def Char.points(char)
+  def self.points(char)
     case char.downcase
       when /[aeilnorstu]/
         1
@@ -20,7 +20,7 @@ module Char
     end
   end
 
-  def hand(char)
+  def self.hand(char)
    case char.downcase
    when /[qwertasdfgzxcv12345\!\@\#\$\%\`\~]/
      :left

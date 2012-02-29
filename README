@@ -10,9 +10,7 @@ The dictionary is built from the top 20,000 common words list as found on Wiktio
 
 
 TODOs:
-add tags (high scrabble, left/right hand, hard-to-spell)
 search by length, syllables, min scrabble score
-add koremutake (http://rubygems.org/gems/koremutake)
 add random "uncommon" word
 api
 drop-in gem? Rails Engine

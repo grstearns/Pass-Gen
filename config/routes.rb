@@ -1,5 +1,7 @@
 PassGen::Application.routes.draw do
   get "password/index"
+  get "password/word"
+  get "password/kore"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

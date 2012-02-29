@@ -1,6 +1,6 @@
 # Based on http://stackoverflow.com/questions/88311/how-best-to-generate-a-random-string-in-ruby
 module RandString
-  def self.alpha
+  def self.alpha(opts={})
     opts[:char_ranges] = [('a'..'z'),('A'..'Z')]
     rand opts
   end

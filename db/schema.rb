@@ -11,22 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120209215425) do
+ActiveRecord::Schema.define(:version => 20120229135031) do
 
-  create_table "lexes", :force => true do |t|
+  create_table "tags", :force => true do |t|
     t.string "name"
   end
 
-  create_table "spellings", :force => true do |t|
+  create_table "tags_words", :force => true do |t|
+    t.integer "word_id"
+    t.integer "tag_id"
+  end
+
+  create_table "words", :force => true do |t|
     t.string  "spelling"
     t.integer "syllables"
     t.integer "length"
     t.integer "scrabble"
-  end
-
-  create_table "words", :force => true do |t|
-    t.integer "lex_id"
-    t.integer "spelling_id"
   end
 
 end
